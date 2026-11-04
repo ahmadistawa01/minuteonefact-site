@@ -1,0 +1,40 @@
+/* One stylesheet for the three pages Google's audit asks to see. Plain CSS,
+   no build step: these are served straight from GitHub Pages. */
+:root {
+  --bg: #fbfaf8;
+  --fg: #1a1a1a;
+  --muted: #5a5a5a;
+  --rule: #e3e0da;
+  --link: #9a3412;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141414;
+    --fg: #ececec;
+    --muted: #a3a3a3;
+    --rule: #2e2e2e;
+    --link: #fb923c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  padding: 3rem 16px 6rem;
+  max-width: 42rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+.sub { color: var(--muted); margin: 0 0 2.5rem; }
+a { color: var(--link); }
+footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .9rem;
+}
+footer a { margin-right: 1rem; }
+code { background: var(--rule); padding: .1em .35em; border-radius: 3px; font-size: .9em; }
